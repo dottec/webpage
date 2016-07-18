@@ -1,0 +1,15 @@
+{
+  "name": "webpage",
+  "version": "1.0.0",
+  "description": "The web page for www.dotte.ch",
+  "author": "Hiroki Yagita",
+  "license": "MIT",
+  "scripts": {
+    "minify:html": "html-minifier -c html-minifier.conf index.html -o dist/index.html",
+    "prebuild": "mkdir -p dist/js && mkdir -p dist/css",
+    "build": "npm run prebuild && npm run minify:html"
+  },
+  "devDependencies": {
+    "html-minifier": "^3.0.1"
+  }
+}
