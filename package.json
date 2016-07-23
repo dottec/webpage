@@ -5,9 +5,10 @@
   "author": "Hiroki Yagita",
   "license": "MIT",
   "scripts": {
+    "minify:amphtml": "html-minifier -c html-minifier.conf index.amp.html -o dist/index.amp.html",
     "minify:html": "html-minifier -c html-minifier.conf index.html -o dist/index.html",
     "prebuild": "mkdir -p dist/js && mkdir -p dist/css",
-    "build": "npm run prebuild && npm run minify:html"
+    "build": "npm run prebuild && npm run minify:html && npm run minify:amphtml"
   },
   "devDependencies": {
     "html-minifier": "^3.0.1"
